@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Mvc.Razor;
 
 namespace sahabat_umkm
 {
@@ -22,6 +23,10 @@ namespace sahabat_umkm
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            // Include this after .AddMvc under ConfigureServices in Startup.cs
+            services.Configure<RazorViewEngineOptions>(options => {
+                options.ViewLocationExpanders.Add(new FeaturesViewLocationExpander());
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -38,6 +43,8 @@ namespace sahabat_umkm
             }
 
             app.UseStaticFiles();
+
+           
 
             app.UseMvc(routes =>
             {
