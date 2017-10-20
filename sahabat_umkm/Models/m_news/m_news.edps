@@ -5,6 +5,20 @@
     <Generation>
       <GeneratedFiles>
         <File Name="m_news.m_news_context.cs" />
+        <File Name="m_news.m_user.cs" />
+        <File Name="m_news.m_user_group.cs" />
+        <File Name="m_news.feature_map.cs" />
+        <File Name="m_news.m_feature.cs" />
+        <File Name="m_news.m_feature_group.cs" />
+        <File Name="m_news.m_parameter.cs" />
+        <File Name="m_news.m_kelurahan_desa.cs" />
+        <File Name="m_news.m_agama.cs" />
+        <File Name="m_news.m_golongan_darah.cs" />
+        <File Name="m_news.m_jenjang_pendidikan.cs" />
+        <File Name="m_news.m_jenis_bidang_usaha.cs" />
+        <File Name="m_news.m_pilihan_omzet.cs" />
+        <File Name="m_news.t_data_anggota.cs" />
+        <File Name="m_news.t_data_usaha.cs" />
       </GeneratedFiles>
     </Generation>
     <DatabaseFirstNamingRules>

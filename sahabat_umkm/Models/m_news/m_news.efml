@@ -261,6 +261,9 @@
     <property name="npwp_usaha" type="String" p1:ValidateRequired="true" p1:Guid="0a2438ba-a759-4244-b62f-bf70c1edc9d3">
       <column name="" />
     </property>
+    <property name="t_data_anggota_id" type="Int32" p1:ValidateRequired="true" p1:Guid="d1ad7d3f-f1fc-4e37-ac03-e03ed6e004ba">
+      <column name="" not-null="False" />
+    </property>
   </class>
   <associations>
     <association name="m_user_group_m_user" cardinality="OneToMany" on-delete="Restrict" p1:Guid="6a47c573-00ad-4a1e-a15f-7c71be651757">
@@ -341,6 +344,14 @@
       </end1>
       <end2 multiplicity="Many" name="t_data_usaha" class="m_kelurahan_desa" relation-class="t_data_usaha" p1:Guid="4dd21080-40a8-499e-9ef1-0fd99e9e264e">
         <property name="m_kelurahan_desa_id" />
+      </end2>
+    </association>
+    <association name="t_data_anggota_t_data_usaha" cardinality="OneToMany" p1:Guid="c62036af-b210-4a73-9fd9-ef89d8eafa16">
+      <end1 multiplicity="One" name="t_data_anggota" class="t_data_usaha" relation-class="t_data_anggota" constrained="True" p1:Guid="9feb7cc2-f702-43f7-8a47-90fc68c64d85">
+        <property name="t_data_anggota_id" />
+      </end1>
+      <end2 multiplicity="Many" name="t_data_usaha" class="t_data_anggota" relation-class="t_data_usaha" p1:Guid="e7652249-12af-4e80-8858-1309a20b3937">
+        <property name="t_data_anggota_id" />
       </end2>
     </association>
   </associations>
