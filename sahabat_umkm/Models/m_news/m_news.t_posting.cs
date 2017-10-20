@@ -18,32 +18,50 @@ using System.Collections.Generic;
 
 namespace m_news_context
 {
-    public partial class m_agama {
+    public partial class t_posting {
 
-        public m_agama()
+        public t_posting()
         {
             OnCreated();
         }
 
-        public virtual int m_agama_id
+        public virtual int t_posting_id
         {
             get;
             set;
         }
 
-        public virtual string nama_agama
+        public virtual string judul_posting
         {
             get;
             set;
         }
 
-        public virtual bool status_aktif
+        public virtual string isi_posting
         {
             get;
             set;
         }
 
-        public virtual int sequence_agama
+        public virtual System.DateTime tanggal_posting
+        {
+            get;
+            set;
+        }
+
+        public virtual string status_posting
+        {
+            get;
+            set;
+        }
+
+        public virtual int t_kategori_posting_id
+        {
+            get;
+            set;
+        }
+
+        public virtual t_kategori_posting t_kategori_posting
         {
             get;
             set;

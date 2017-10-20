@@ -265,6 +265,34 @@
       <column name="" not-null="False" />
     </property>
   </class>
+  <class name="t_posting" entity-set="t_postings" table="" p1:Guid="b2fc39d8-93fe-4660-9751-9aaf5ce76f0f">
+    <id name="t_posting_id" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="f8cf3dbd-2765-4f0c-8488-47162d543a22">
+      <column name="" />
+    </id>
+    <property name="judul_posting" type="String" p1:ValidateRequired="true" p1:Guid="efda6b85-0f88-47b0-843f-4e1b8858bc61">
+      <column name="" />
+    </property>
+    <property name="isi_posting" type="String" p1:ValidateRequired="true" p1:Guid="e2bee5b5-d079-40ae-8bf8-25c4969f7014">
+      <column name="" />
+    </property>
+    <property name="tanggal_posting" type="DateTime" p1:ValidateRequired="true" p1:Guid="cb15ddaf-bd3a-4509-bb48-f9eb4362f5e4">
+      <column name="" />
+    </property>
+    <property name="status_posting" type="String" p1:ValidateRequired="true" p1:Guid="7114af7d-37ae-47e7-bfb3-1cf65661c392">
+      <column name="" />
+    </property>
+    <property name="t_kategori_posting_id" type="Int32" p1:ValidateRequired="true" p1:Guid="95bd4df2-1ff9-42ca-aff3-3126b12012d9">
+      <column name="" not-null="False" />
+    </property>
+  </class>
+  <class name="t_kategori_posting" entity-set="t_kategori_posting" table="" p1:Guid="1a8a8cf4-afc6-46a0-a988-aec8105256a6">
+    <id name="t_kategori_posting_id" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="21f751a2-8129-4fa0-a99c-82d549fa4329">
+      <column name="" />
+    </id>
+    <property name="nama_kategori_posting" type="String" p1:ValidateRequired="true" p1:Guid="43053637-4fe8-48f7-bf00-6590f31ec7fc">
+      <column name="" />
+    </property>
+  </class>
   <associations>
     <association name="m_user_group_m_user" cardinality="OneToMany" on-delete="Restrict" p1:Guid="6a47c573-00ad-4a1e-a15f-7c71be651757">
       <end1 multiplicity="One" name="m_user_group" class="m_user" relation-class="m_user_group" constrained="True" p1:Guid="904cefbe-f4a4-4a7f-b1c6-6515d50a04d5">
@@ -352,6 +380,14 @@
       </end1>
       <end2 multiplicity="Many" name="t_data_usaha" class="t_data_anggota" relation-class="t_data_usaha" p1:Guid="e7652249-12af-4e80-8858-1309a20b3937">
         <property name="t_data_anggota_id" />
+      </end2>
+    </association>
+    <association name="t_kategori_posting_t_posting" cardinality="OneToMany" p1:Guid="9c2e30b1-db77-47fb-aedc-e11198ac6048">
+      <end1 multiplicity="One" name="t_kategori_posting" class="t_posting" relation-class="t_kategori_posting" constrained="True" p1:Guid="12b20ef1-de59-41dd-87f0-41c160ef9256">
+        <property name="t_kategori_posting_id" />
+      </end1>
+      <end2 multiplicity="Many" name="t_posting" class="t_kategori_posting" relation-class="t_posting" p1:Guid="fa4d6a1b-9b15-4926-b64f-b2de944bbd02">
+        <property name="t_kategori_posting_id" />
       </end2>
     </association>
   </associations>

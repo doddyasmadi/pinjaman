@@ -1181,13 +1181,13 @@
             </Oid>
           </Model>
         </Children>
-        <GridSize>8 px</GridSize>
+        <GridEnabled>false</GridEnabled>
         <ViewPort>
           <ScaleMode>Free</ScaleMode>
           <Scale>1</Scale>
           <Location>
-            <X>39.5 px</X>
-            <Y>37.5 px</Y>
+            <X>40 px</X>
+            <Y>38 px</Y>
           </Location>
         </ViewPort>
         <Oid xsi:type="SchemaModelOID">
