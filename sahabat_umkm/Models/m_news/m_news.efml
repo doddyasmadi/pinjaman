@@ -110,6 +110,158 @@
       <column name="" length="5" />
     </property>
   </class>
+  <class name="m_agama" entity-set="m_agamas" table="m_agama" p1:Guid="ef720ff3-7330-4c82-8aa5-40d12cfb861c">
+    <id name="m_agama_id" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="25debb0d-4df0-4322-8604-d08ed90cae6a">
+      <column name="" />
+    </id>
+    <property name="nama_agama" type="String" p1:ValidateRequired="true" p1:Guid="3e4debbf-9611-48eb-987c-736dffddc4c2">
+      <column name="" length="50" />
+    </property>
+    <property name="status_aktif" type="Boolean" p1:ValidateRequired="true" p1:Guid="6c72f8ce-2b51-4bdf-ae5b-9a2897afdfbb">
+      <column name="" />
+    </property>
+    <property name="sequence_agama" type="Int32" p1:ValidateRequired="true" p1:Guid="5db39969-8fdc-4ff5-9fa9-ce3a00c6e6f0">
+      <column name="" />
+    </property>
+  </class>
+  <class name="m_golongan_darah" entity-set="m_golongan_darahs" table="m_golongan_darah" p1:Guid="3d6b3e28-a087-411d-98c8-7fe22e8c34e6">
+    <id name="m_golongan_darah_id" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="2218171b-5c55-47bb-a679-841bc33b48b1">
+      <column name="" />
+    </id>
+    <property name="nama_golongan_darah" type="String" p1:ValidateRequired="true" p1:Guid="72fbd5ef-9cbc-485b-af99-d7f0eb4ef39b">
+      <column name="" length="5" />
+    </property>
+  </class>
+  <class name="m_jenjang_pendidikan" entity-set="m_jenjang_pendidikans" table="m_jenjang_pendidikan" p1:Guid="fe913c47-0959-460d-aa7b-7b375a41251d">
+    <id name="m_jenjang_pendidikan_id" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="02344cc7-7125-4835-8744-6af9acea7362">
+      <column name="" />
+    </id>
+    <property name="nama_jenjang_pendidikan" type="String" p1:ValidateRequired="true" p1:Guid="8494938c-1d07-465e-9dbe-661cbcf6bc5b">
+      <column name="" length="100" />
+    </property>
+    <property name="status_aktif" type="Boolean" p1:ValidateRequired="true" p1:Guid="9d6c2dc2-2e70-4b99-848e-fd4812b0927c">
+      <column name="" />
+    </property>
+  </class>
+  <class name="m_jenis_bidang_usaha" entity-set="m_jenis_bidang_usahas" table="" p1:Guid="d621c6c7-ed02-4ff5-9176-309ca71e453c">
+    <id name="m_jenis_bidang_usaha_id" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="efa4a0ec-92ff-4faa-b6a2-7295fdda832b">
+      <column name="" />
+    </id>
+    <property name="nama_jenis_bidang_usaha" type="String" p1:ValidateRequired="true" p1:Guid="34abd421-11a4-495d-9561-e03d07fd0699">
+      <column name="" />
+    </property>
+  </class>
+  <class name="m_pilihan_omzet" entity-set="m_pilihan_omzets" table="" p1:Guid="9c5d3b09-a00f-4dfb-8203-b228df43f2d1">
+    <id name="m_pilihan_omzet_id" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="3f5e6910-4c36-46d6-894f-01086e2f3b7d">
+      <column name="" />
+    </id>
+    <property name="pilihan_omzet" type="String" p1:ValidateRequired="true" p1:Guid="9e1be6df-b5b6-416e-a8b6-2cbe41eecf5d">
+      <column name="" />
+    </property>
+    <property name="urutan_pilihan_omzet" type="Int32" p1:ValidateRequired="true" p1:Guid="f78f5e1d-72eb-46ae-a2e5-f80ca4cc0e59">
+      <column name="" />
+    </property>
+  </class>
+  <class name="t_data_anggota" entity-set="t_data_anggotas" table="" p1:Guid="1582af39-f310-4db2-8867-f5a309ed5b8e">
+    <id name="t_data_anggota_id" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="addc03fb-ffc2-442c-a64e-ca6ca93d91a1">
+      <column name="" />
+    </id>
+    <property name="nama_depan_anggota" type="String" p1:ValidateRequired="true" p1:Guid="5b3d2da0-dc33-4a86-b229-ee858fe61639">
+      <column name="" />
+    </property>
+    <property name="nama_belakang_anggota" type="String" p1:ValidateRequired="true" p1:Guid="54a2e5a3-1890-43de-a016-643d47768f47">
+      <column name="" />
+    </property>
+    <property name="email_anggota" type="String" p1:ValidateRequired="true" p1:Guid="cb082d62-f7bf-4bf6-ad13-c18ec9b3349d">
+      <column name="" />
+    </property>
+    <property name="telepon_anggota" type="String" p1:ValidateRequired="true" p1:Guid="102029dd-c152-4573-9424-5c319c7dc469">
+      <column name="" />
+    </property>
+    <property name="nomor_ktp_anggota" type="String" p1:ValidateRequired="true" p1:Guid="ecad5bd1-fe64-4cd4-922a-f4c609f44686">
+      <column name="" />
+    </property>
+    <property name="alamat_ktp_anggota" type="String" p1:ValidateRequired="true" p1:Guid="c4a0210f-1a8b-4c5d-9eb5-8de463bb4566">
+      <column name="" />
+    </property>
+    <property name="rt_ktp_anggota" type="String" p1:ValidateRequired="true" p1:Guid="a4c914db-b6b6-443e-8bc3-7c2fe610aa10">
+      <column name="" />
+    </property>
+    <property name="rw_ktp_anggota" type="String" p1:ValidateRequired="true" p1:Guid="914e9c71-dc20-43d2-997b-9fade1038298">
+      <column name="" />
+    </property>
+    <property name="alamat_tempat_tinggal_anggota" type="String" p1:ValidateRequired="true" p1:Guid="2e26ac66-f078-4057-a361-8d40fd504867">
+      <column name="" />
+    </property>
+    <property name="rt_tempat_tinggal_anggota" type="String" p1:ValidateRequired="true" p1:Guid="01754409-b6cc-4ed3-b289-034e9e79487a">
+      <column name="" />
+    </property>
+    <property name="rw_tempat_tinggal_anggota" type="String" p1:ValidateRequired="true" p1:Guid="603fa8b1-6c82-48fb-853c-3aecaf76e277">
+      <column name="" />
+    </property>
+    <property name="asosiasi_komunitas_anggota" type="String" p1:ValidateRequired="true" p1:Guid="4859e1fd-3002-4bbe-89b8-af28925c1cbf">
+      <column name="" />
+    </property>
+    <property name="m_kelurahan_desa_id_ktp_anggota" type="Int32" p1:ValidateRequired="true" p1:Guid="b34b9618-40f8-410d-a19e-ad98a3731ff4">
+      <column name="" not-null="False" />
+    </property>
+    <property name="m_kelurahan_desa_id_tt_anggota" type="Int32" p1:ValidateRequired="true" p1:Guid="42d60815-4e65-4f96-8b2b-ca9f0afa78fd">
+      <column name="" not-null="False" />
+    </property>
+    <property name="m_jenjang_pendidikan_id" type="Int32" p1:ValidateRequired="true" p1:Guid="6b26f892-54e4-4fb1-8ec9-137baf175b8d">
+      <column name="" not-null="False" />
+    </property>
+  </class>
+  <class name="t_data_usaha" entity-set="t_data_usahas" table="" p1:Guid="0284e13c-bc79-447e-b18b-16fe09765884">
+    <id name="t_data_usaha_id" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="300d23a5-9829-4374-8cd0-23b20aa678ac">
+      <column name="" />
+    </id>
+    <property name="nama_badan_usaha" type="String" p1:ValidateRequired="true" p1:Guid="b5befdaf-e674-4f95-875d-75bcd1e5c659">
+      <column name="" />
+    </property>
+    <property name="nama_bisnis" type="String" p1:ValidateRequired="true" p1:Guid="3437529d-3c92-4fe2-91f3-f70ccc15753c">
+      <column name="" />
+    </property>
+    <property name="jabatan_bisnis" type="String" p1:ValidateRequired="true" p1:Guid="a09cb4f1-cdb9-4543-bce4-d9179cc78533">
+      <column name="" />
+    </property>
+    <property name="deskripsi_usaha" type="String" p1:ValidateRequired="true" p1:Guid="5e77d2a6-29f5-47d8-a2b6-4409efdec0dd">
+      <column name="" />
+    </property>
+    <property name="tahun_pendirian_usaha" type="String" p1:ValidateRequired="true" p1:Guid="916e530c-78a9-4aa6-9ee2-6367f3c533b6">
+      <column name="" />
+    </property>
+    <property name="alamat_usaha" type="String" p1:ValidateRequired="true" p1:Guid="3c3007d5-89d9-48bb-987b-1cf696668143">
+      <column name="" />
+    </property>
+    <property name="m_jenis_bidang_usaha_id" type="Int32" p1:ValidateRequired="true" p1:Guid="833b2b65-39d4-42c1-8398-940d82c96975">
+      <column name="" not-null="False" />
+    </property>
+    <property name="m_pilihan_omzet_id" type="Int32" p1:ValidateRequired="true" p1:Guid="95239d37-1fa8-4dc3-b193-a7a6cad5e106">
+      <column name="" not-null="False" />
+    </property>
+    <property name="m_kelurahan_desa_id" type="Int32" p1:ValidateRequired="true" p1:Guid="082340da-75b0-4477-b83e-ba990bb47ffc">
+      <column name="" not-null="False" />
+    </property>
+    <property name="website_usaha" type="String" p1:ValidateRequired="true" p1:Guid="0b530ab3-ee50-4e83-8003-f714f1283640">
+      <column name="" />
+    </property>
+    <property name="sosmed_usaha_fb" type="String" p1:ValidateRequired="true" p1:Guid="374a0f87-b5e2-4e7e-b072-e2b39aa82998">
+      <column name="" />
+    </property>
+    <property name="sosmed_usaha_ig" type="String" p1:ValidateRequired="true" p1:Guid="136d06d5-144b-49ac-bd20-77395ca3d98e">
+      <column name="" />
+    </property>
+    <property name="sosmed_usaha_tw" type="String" p1:ValidateRequired="true" p1:Guid="86e64529-3489-497d-803c-e2f6bb4241fd">
+      <column name="" />
+    </property>
+    <property name="ktp_usaha" type="String" p1:ValidateRequired="true" p1:Guid="4da20036-a04a-4a92-b4bf-6c550e67ba10">
+      <column name="" />
+    </property>
+    <property name="npwp_usaha" type="String" p1:ValidateRequired="true" p1:Guid="0a2438ba-a759-4244-b62f-bf70c1edc9d3">
+      <column name="" />
+    </property>
+  </class>
   <associations>
     <association name="m_user_group_m_user" cardinality="OneToMany" on-delete="Restrict" p1:Guid="6a47c573-00ad-4a1e-a15f-7c71be651757">
       <end1 multiplicity="One" name="m_user_group" class="m_user" relation-class="m_user_group" constrained="True" p1:Guid="904cefbe-f4a4-4a7f-b1c6-6515d50a04d5">
@@ -141,6 +293,54 @@
       </end1>
       <end2 multiplicity="Many" name="m_feature" class="m_feature_group" relation-class="m_feature" p1:Guid="2b0ba9f5-a4fa-412e-b66d-c1fe46083968">
         <property name="m_feature_group_id" />
+      </end2>
+    </association>
+    <association name="m_kelurahan_desa_t_data_anggota" cardinality="OneToMany" p1:Guid="94374045-d3ef-448c-aa90-f036c28ebffe">
+      <end1 multiplicity="One" name="m_kelurahan_desa_ktp_anggota" class="t_data_anggota" relation-class="m_kelurahan_desa" constrained="True" p1:Guid="090d84aa-42c9-413f-9516-923174c19b8e">
+        <property name="m_kelurahan_desa_id" />
+      </end1>
+      <end2 multiplicity="Many" name="t_data_anggota_ktp_anggota" class="m_kelurahan_desa" relation-class="t_data_anggota" p1:Guid="ed6410cf-bae1-4716-a108-ee00848e4f9a">
+        <property name="m_kelurahan_desa_id_ktp_anggota" />
+      </end2>
+    </association>
+    <association name="m_kelurahan_desa_t_data_anggota1" cardinality="OneToMany" p1:Guid="728cb7cf-f82f-4a63-91df-78ce7fd1503a">
+      <end1 multiplicity="One" name="m_kelurahan_desa_tt_anggota" class="t_data_anggota" relation-class="m_kelurahan_desa" constrained="True" p1:Guid="f53a3665-c32d-4ec3-b88d-b5e3112617e2">
+        <property name="m_kelurahan_desa_id" />
+      </end1>
+      <end2 multiplicity="Many" name="t_data_anggota_tt_anggota" class="m_kelurahan_desa" relation-class="t_data_anggota" p1:Guid="9b902bd7-d935-464e-8462-71cde53da3bd">
+        <property name="m_kelurahan_desa_id_tt_anggota" />
+      </end2>
+    </association>
+    <association name="m_jenjang_pendidikan_t_data_anggota" cardinality="OneToMany" p1:Guid="a87dc928-2421-4710-b9ab-a31cd6de41f7">
+      <end1 multiplicity="One" name="m_jenjang_pendidikan" class="t_data_anggota" relation-class="m_jenjang_pendidikan" constrained="True" p1:Guid="051e1733-c66d-4924-bdcd-58f4cda71fd5">
+        <property name="m_jenjang_pendidikan_id" />
+      </end1>
+      <end2 multiplicity="Many" name="t_data_anggota" class="m_jenjang_pendidikan" relation-class="t_data_anggota" p1:Guid="0c0a3211-43e2-4dc2-860e-af38bad75a16">
+        <property name="m_jenjang_pendidikan_id" />
+      </end2>
+    </association>
+    <association name="m_jenis_bidang_usaha_t_data_usaha" cardinality="OneToMany" p1:Guid="5e342779-38a6-486b-b347-e340f91a9679">
+      <end1 multiplicity="One" name="m_jenis_bidang_usaha" class="t_data_usaha" relation-class="m_jenis_bidang_usaha" constrained="True" p1:Guid="c63c4f68-fdf3-495f-8ef8-0dc0aa5d9ce4">
+        <property name="m_jenis_bidang_usaha_id" />
+      </end1>
+      <end2 multiplicity="Many" name="t_data_usaha" class="m_jenis_bidang_usaha" relation-class="t_data_usaha" p1:Guid="b57e1a69-3fc2-4543-855c-c0d78cc0c468">
+        <property name="m_jenis_bidang_usaha_id" />
+      </end2>
+    </association>
+    <association name="m_pilihan_omzet_t_data_usaha" cardinality="OneToMany" p1:Guid="3bb9a70a-d35d-4215-b9ea-36539e0d9ffc">
+      <end1 multiplicity="One" name="m_pilihan_omzet" class="t_data_usaha" relation-class="m_pilihan_omzet" constrained="True" p1:Guid="a8da45e7-e12f-45dc-b1cb-031737dbea01">
+        <property name="m_pilihan_omzet_id" />
+      </end1>
+      <end2 multiplicity="Many" name="t_data_usaha" class="m_pilihan_omzet" relation-class="t_data_usaha" p1:Guid="fc2dbdde-8852-4b0e-8513-f7c81d5d531d">
+        <property name="m_pilihan_omzet_id" />
+      </end2>
+    </association>
+    <association name="m_kelurahan_desa_t_data_usaha" cardinality="OneToMany" p1:Guid="661f9d89-c6ab-47c4-adf2-74b47bcb6235">
+      <end1 multiplicity="One" name="m_kelurahan_desa" class="t_data_usaha" relation-class="m_kelurahan_desa" constrained="True" p1:Guid="d0536653-16a3-4c08-8b92-b0460c03ad87">
+        <property name="m_kelurahan_desa_id" />
+      </end1>
+      <end2 multiplicity="Many" name="t_data_usaha" class="m_kelurahan_desa" relation-class="t_data_usaha" p1:Guid="4dd21080-40a8-499e-9ef1-0fd99e9e264e">
+        <property name="m_kelurahan_desa_id" />
       </end2>
     </association>
   </associations>

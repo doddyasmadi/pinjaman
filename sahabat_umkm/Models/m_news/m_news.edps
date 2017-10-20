@@ -21,6 +21,7 @@
     <Diagrams>
       <Diagram Name="1. akses" DefaultDiagram="True" />
       <Diagram Name="2. master" />
+      <Diagram Name="3. membership" />
     </Diagrams>
     <Templates>
       <Template Name="EF Core" Description="Use this template to generate classes for an Entity Framework Core model." Enabled="True" PredefinedTemplateName="EF Core C#">
