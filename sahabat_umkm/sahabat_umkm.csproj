@@ -22,4 +22,14 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\m_news\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Models\m_news\m_news.efml">
+      <Generator>DevartEFCoreGenerator</Generator>
+    </None>
+  </ItemGroup>
+
 </Project>
