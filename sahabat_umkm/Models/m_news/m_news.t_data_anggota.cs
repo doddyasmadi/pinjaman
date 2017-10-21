@@ -16,7 +16,7 @@ using System.Linq.Expressions;
 using System.Data.Common;
 using System.Collections.Generic;
 
-namespace m_news_context
+namespace m_news
 {
     public partial class t_data_anggota {
 

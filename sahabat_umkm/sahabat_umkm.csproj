@@ -31,5 +31,10 @@
       <Generator>DevartEFCoreGenerator</Generator>
     </None>
   </ItemGroup>
+  
+   <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.1" />
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
+  </ItemGroup>
 
 </Project>

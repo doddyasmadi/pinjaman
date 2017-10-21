@@ -20,9 +20,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Internal;
 using Microsoft.EntityFrameworkCore.Metadata;
-using m_news_context;
 
-namespace sahabat_umkm
+namespace m_news
 {
 
     public partial class m_news_context : DbContext
@@ -42,8 +41,19 @@ namespace sahabat_umkm
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            CustomizeConfiguration(ref optionsBuilder);
-            base.OnConfiguring(optionsBuilder);
+            try
+            {
+                if (!optionsBuilder.IsConfigured)
+                {
+                    optionsBuilder.UseMySql(sahabat_umkm.AppCoreGlobal.get_connection_string("Access", "MySQL"));
+                    CustomizeConfiguration(ref optionsBuilder);
+                    base.OnConfiguring(optionsBuilder);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
 
         partial void CustomizeConfiguration(ref DbContextOptionsBuilder optionsBuilder);
