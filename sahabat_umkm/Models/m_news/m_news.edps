@@ -4,7 +4,7 @@
     <Connection ConnectionString="" Provider="" />
     <Generation>
       <GeneratedFiles>
-        <File Name="m_news.m_news_context.cs" />
+        <File Name="m_news.m_news.cs" />
         <File Name="m_news.m_user.cs" />
         <File Name="m_news.m_user_group.cs" />
         <File Name="m_news.feature_map.cs" />
@@ -19,6 +19,8 @@
         <File Name="m_news.m_pilihan_omzet.cs" />
         <File Name="m_news.t_data_anggota.cs" />
         <File Name="m_news.t_data_usaha.cs" />
+        <File Name="m_news.t_posting.cs" />
+        <File Name="m_news.t_kategori_posting.cs" />
       </GeneratedFiles>
     </Generation>
     <DatabaseFirstNamingRules>

@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Mvc.Razor;
-using m_news;
 using Microsoft.EntityFrameworkCore;
 
 namespace sahabat_umkm
@@ -31,7 +30,7 @@ namespace sahabat_umkm
                 options.ViewLocationExpanders.Add(new FeaturesViewLocationExpander());
             });
 
-            services.AddDbContext<m_news_context>(options => options.UseMySql(AppCoreGlobal.get_connection_string("Access", "MySQL")));
+            services.AddDbContext<sahabat_umkm.m_news>(options => options.UseMySql(AppCoreGlobal.get_connection_string("Access", "MySQL")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

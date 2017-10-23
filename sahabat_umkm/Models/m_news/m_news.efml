@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<efcore context-namespace="sahabat_umkm" p1:name="m_news_context" p1:Guid="793b5bcc-da56-4915-8fa3-0ac72537b75c" xmlns:p1="http://devart.com/schemas/EntityDeveloper/1.0">
+<efcore namespace="sahabat_umkm" p1:name="m_news" p1:Guid="793b5bcc-da56-4915-8fa3-0ac72537b75c" xmlns:p1="http://devart.com/schemas/EntityDeveloper/1.0">
   <class name="m_user" entity-set="m_users" table="m_user" p1:Guid="1e5f18f8-c9de-4f63-859b-3af323be3362">
     <id name="m_user_id" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="02d1530e-a556-408a-ada4-571e6feb80d8">
       <column name="m_user_id" />
