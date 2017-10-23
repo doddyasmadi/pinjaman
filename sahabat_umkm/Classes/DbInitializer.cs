@@ -17,7 +17,7 @@ public static class DbInitializer {
 
       context.Database.Migrate();
 
-      if (context.m_users.Any() || context.m_feature_groups.Any()) { // Look for any user.
+      if (context.m_user.Any() || context.m_feature_group.Any()) { // Look for any user.
         return;   // DB has been seeded
       }
 
@@ -27,7 +27,7 @@ public static class DbInitializer {
                 new m_feature_group{feature_group_name="Data" },
                 new m_feature_group{feature_group_name="Akses" },
                 };
-      foreach (m_feature_group m_feature_group_data in m_feature_group) { context.m_feature_groups.Add(m_feature_group_data); }
+      foreach (m_feature_group m_feature_group_data in m_feature_group) { context.m_feature_group.Add(m_feature_group_data); }
       context.SaveChanges();
 
       //m_feature
@@ -51,7 +51,7 @@ public static class DbInitializer {
                     new m_feature{feature_name="Log Viewer", feature_sequence=7, feature_url="log_viewer", feature_icon="icon-history", feature_private=true, m_feature_group_id=m_feature_group_id},
                   };
       List<m_feature> m_feature = m_feature1.Concat(m_feature2).ToList(); //add several list together
-      foreach (m_feature m_feature_data in m_feature) { context.m_features.Add(m_feature_data); }
+      foreach (m_feature m_feature_data in m_feature) { context.m_feature.Add(m_feature_data); }
       context.SaveChanges();
 
       //m_user_group
@@ -59,7 +59,7 @@ public static class DbInitializer {
         {
                     new m_user_group{user_group_name="Administrator", user_group_default=true},
                   };
-      foreach (m_user_group m_user_group_data in m_user_group) { context.m_user_groups.Add(m_user_group_data); }
+      foreach (m_user_group m_user_group_data in m_user_group) { context.m_user_group.Add(m_user_group_data); }
       context.SaveChanges();
 
       //m_user
@@ -67,9 +67,17 @@ public static class DbInitializer {
         {
                     new m_user{user_name="Admin", user_password=PasswordStorage.CreateHash("Admin"), user_email="admin@email.com", user_active=true, m_user_group_id=1},
                   };
-      foreach (m_user m_user_data in m_user) { context.m_users.Add(m_user_data); }
+      foreach (m_user m_user_data in m_user) { context.m_user.Add(m_user_data); }
       context.SaveChanges();
 
+      //m_parameter
+      List<m_parameter> m_parameter = new List<m_parameter>
+      {
+        new m_parameter{parameter_group="Base Setting",parameter_key="Session Timeout",parameter_value="30"},
+        new m_parameter{parameter_group="Base Setting",parameter_key="MaxArchiveFiles",parameter_value="730"},
+      };
+      foreach (m_parameter m_parameter_data in m_parameter) { context.m_parameter.Add(m_parameter_data); }
+      context.SaveChanges();
 
     }
   }

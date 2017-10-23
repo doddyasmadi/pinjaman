@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <efcore namespace="sahabat_umkm" p1:name="m_news" p1:Guid="793b5bcc-da56-4915-8fa3-0ac72537b75c" xmlns:p1="http://devart.com/schemas/EntityDeveloper/1.0">
-  <class name="m_user" entity-set="m_users" table="m_user" p1:Guid="1e5f18f8-c9de-4f63-859b-3af323be3362">
+  <class name="m_user" entity-set="m_user" table="m_user" p1:Guid="1e5f18f8-c9de-4f63-859b-3af323be3362">
     <id name="m_user_id" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="02d1530e-a556-408a-ada4-571e6feb80d8">
       <column name="m_user_id" />
     </id>
@@ -20,7 +20,7 @@
       <column name="" not-null="False" />
     </property>
   </class>
-  <class name="m_user_group" entity-set="m_user_groups" table="m_user_group" p1:Guid="22b39a48-d3cf-41b6-8e9b-6c06bf740e74">
+  <class name="m_user_group" entity-set="m_user_group" table="m_user_group" p1:Guid="22b39a48-d3cf-41b6-8e9b-6c06bf740e74">
     <id name="m_user_group_id" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="66baed2b-fd85-4610-80e7-5a8aa6600348">
       <column name="m_user_group_id" />
     </id>
@@ -31,7 +31,7 @@
       <column name="" />
     </property>
   </class>
-  <class name="feature_map" entity-set="feature_maps" table="feature_map" p1:Guid="24e4ee5c-1d7c-4e73-a29f-e22c388dda46">
+  <class name="feature_map" entity-set="feature_map" table="feature_map" p1:Guid="24e4ee5c-1d7c-4e73-a29f-e22c388dda46">
     <id name="feature_map_id" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="529a2ad0-ba99-48e1-8da6-c9dbb5f48308">
       <column name="" />
     </id>
@@ -42,7 +42,7 @@
       <column name="" not-null="False" />
     </property>
   </class>
-  <class name="m_feature" entity-set="m_features" table="m_feature" p1:Guid="c17b5b73-6eae-4c02-a836-ccdafe7e6f61">
+  <class name="m_feature" entity-set="m_feature" table="m_feature" p1:Guid="c17b5b73-6eae-4c02-a836-ccdafe7e6f61">
     <id name="m_feature_id" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="de359e6f-cd96-40fc-bbbc-e02d9cd5942e">
       <column name="m_feature_id" />
     </id>
@@ -65,7 +65,7 @@
       <column name="" not-null="False" />
     </property>
   </class>
-  <class name="m_feature_group" entity-set="m_feature_groups" table="m_feature_group" p1:Guid="9c8766ac-b6e6-4607-8412-2673bca3f318">
+  <class name="m_feature_group" entity-set="m_feature_group" table="m_feature_group" p1:Guid="9c8766ac-b6e6-4607-8412-2673bca3f318">
     <id name="m_feature_group_id" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="a81b9016-873d-438f-9960-755823d209b4">
       <column name="m_feature_group_id" />
     </id>
@@ -73,7 +73,7 @@
       <column name="feature_group_name" length="100" />
     </property>
   </class>
-  <class name="m_parameter" entity-set="m_parameters" table="" p1:Guid="caf86ede-4ca1-42f8-a3e3-78f5b5ed3635">
+  <class name="m_parameter" entity-set="m_parameter" table="" p1:Guid="caf86ede-4ca1-42f8-a3e3-78f5b5ed3635">
     <id name="m_parameter_id" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="668708d6-a7a2-44cd-877f-c8a57078eaa2">
       <column name="" />
     </id>
@@ -87,7 +87,7 @@
       <column name="" />
     </property>
   </class>
-  <class name="m_kelurahan_desa" entity-set="m_kelurahan_desas" table="m_kelurahan_desa" p1:Guid="2279b504-4a82-4cee-965a-66a9d2ef4681">
+  <class name="m_kelurahan_desa" entity-set="m_kelurahan_desa" table="m_kelurahan_desa" p1:Guid="2279b504-4a82-4cee-965a-66a9d2ef4681">
     <id name="m_kelurahan_desa_id" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="2e7a49e0-e370-4823-bd15-ef268955a771">
       <column name="" />
     </id>
@@ -110,7 +110,7 @@
       <column name="" length="5" />
     </property>
   </class>
-  <class name="m_agama" entity-set="m_agamas" table="m_agama" p1:Guid="ef720ff3-7330-4c82-8aa5-40d12cfb861c">
+  <class name="m_agama" entity-set="m_agama" table="m_agama" p1:Guid="ef720ff3-7330-4c82-8aa5-40d12cfb861c">
     <id name="m_agama_id" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="25debb0d-4df0-4322-8604-d08ed90cae6a">
       <column name="" />
     </id>
@@ -124,7 +124,7 @@
       <column name="" />
     </property>
   </class>
-  <class name="m_golongan_darah" entity-set="m_golongan_darahs" table="m_golongan_darah" p1:Guid="3d6b3e28-a087-411d-98c8-7fe22e8c34e6">
+  <class name="m_golongan_darah" entity-set="m_golongan_darah" table="m_golongan_darah" p1:Guid="3d6b3e28-a087-411d-98c8-7fe22e8c34e6">
     <id name="m_golongan_darah_id" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="2218171b-5c55-47bb-a679-841bc33b48b1">
       <column name="" />
     </id>
@@ -132,7 +132,7 @@
       <column name="" length="5" />
     </property>
   </class>
-  <class name="m_jenjang_pendidikan" entity-set="m_jenjang_pendidikans" table="m_jenjang_pendidikan" p1:Guid="fe913c47-0959-460d-aa7b-7b375a41251d">
+  <class name="m_jenjang_pendidikan" entity-set="m_jenjang_pendidikan" table="m_jenjang_pendidikan" p1:Guid="fe913c47-0959-460d-aa7b-7b375a41251d">
     <id name="m_jenjang_pendidikan_id" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="02344cc7-7125-4835-8744-6af9acea7362">
       <column name="" />
     </id>
@@ -143,7 +143,7 @@
       <column name="" />
     </property>
   </class>
-  <class name="m_jenis_bidang_usaha" entity-set="m_jenis_bidang_usahas" table="" p1:Guid="d621c6c7-ed02-4ff5-9176-309ca71e453c">
+  <class name="m_jenis_bidang_usaha" entity-set="m_jenis_bidang_usaha" table="" p1:Guid="d621c6c7-ed02-4ff5-9176-309ca71e453c">
     <id name="m_jenis_bidang_usaha_id" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="efa4a0ec-92ff-4faa-b6a2-7295fdda832b">
       <column name="" />
     </id>
@@ -151,7 +151,7 @@
       <column name="" />
     </property>
   </class>
-  <class name="m_pilihan_omzet" entity-set="m_pilihan_omzets" table="" p1:Guid="9c5d3b09-a00f-4dfb-8203-b228df43f2d1">
+  <class name="m_pilihan_omzet" entity-set="m_pilihan_omzet" table="" p1:Guid="9c5d3b09-a00f-4dfb-8203-b228df43f2d1">
     <id name="m_pilihan_omzet_id" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="3f5e6910-4c36-46d6-894f-01086e2f3b7d">
       <column name="" />
     </id>
@@ -162,7 +162,7 @@
       <column name="" />
     </property>
   </class>
-  <class name="t_data_anggota" entity-set="t_data_anggotas" table="" p1:Guid="1582af39-f310-4db2-8867-f5a309ed5b8e">
+  <class name="t_data_anggota" entity-set="t_data_anggota" table="" p1:Guid="1582af39-f310-4db2-8867-f5a309ed5b8e">
     <id name="t_data_anggota_id" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="addc03fb-ffc2-442c-a64e-ca6ca93d91a1">
       <column name="" />
     </id>
@@ -212,7 +212,7 @@
       <column name="" not-null="False" />
     </property>
   </class>
-  <class name="t_data_usaha" entity-set="t_data_usahas" table="" p1:Guid="0284e13c-bc79-447e-b18b-16fe09765884">
+  <class name="t_data_usaha" entity-set="t_data_usaha" table="" p1:Guid="0284e13c-bc79-447e-b18b-16fe09765884">
     <id name="t_data_usaha_id" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="300d23a5-9829-4374-8cd0-23b20aa678ac">
       <column name="" />
     </id>
@@ -265,7 +265,7 @@
       <column name="" not-null="False" />
     </property>
   </class>
-  <class name="t_posting" entity-set="t_postings" table="" p1:Guid="b2fc39d8-93fe-4660-9751-9aaf5ce76f0f">
+  <class name="t_posting" entity-set="t_posting" table="" p1:Guid="b2fc39d8-93fe-4660-9751-9aaf5ce76f0f">
     <id name="t_posting_id" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="f8cf3dbd-2765-4f0c-8488-47162d543a22">
       <column name="" />
     </id>

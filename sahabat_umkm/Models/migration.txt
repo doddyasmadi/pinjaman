@@ -1,15 +1,12 @@
-﻿try
-{
-    if (!optionsBuilder.IsConfigured)
-    {
-        optionsBuilder.UseMySql(sahabat_umkm.AppCoreGlobal.get_connection_string("Access", "MySQL"));
-        CustomizeConfiguration(ref optionsBuilder);
-        base.OnConfiguring(optionsBuilder);
-    }
+﻿try {
+  if (!optionsBuilder.IsConfigured) {
+    optionsBuilder.UseMySql(sahabat_umkm.AppCoreGlobal.get_connection_string("Access", "MySQL"));
+    CustomizeConfiguration(ref optionsBuilder);
+    base.OnConfiguring(optionsBuilder);
+  }
 }
-catch (Exception e)
-{
-    Console.WriteLine(e.Message);
+catch (Exception e) {
+  Console.WriteLine(e.Message);
 }
 
 m_news_1.1.1.1
