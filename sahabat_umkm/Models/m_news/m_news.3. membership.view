@@ -1858,7 +1858,7 @@
             </Oid>
           </Model>
         </Children>
-        <GridSize>8 px</GridSize>
+        <GridEnabled>false</GridEnabled>
         <ViewPort>
           <ScaleMode>Free</ScaleMode>
           <Scale>1</Scale>

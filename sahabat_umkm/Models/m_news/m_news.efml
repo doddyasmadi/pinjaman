@@ -281,6 +281,9 @@
     <property name="status_posting" type="String" p1:ValidateRequired="true" p1:Guid="7114af7d-37ae-47e7-bfb3-1cf65661c392">
       <column name="" />
     </property>
+    <property name="thumbnail_posting" type="String" p1:ValidateRequired="true" p1:Guid="3436f65a-a567-480b-9d00-dc9be85f3616">
+      <column name="" />
+    </property>
     <property name="t_kategori_posting_id" type="Int32" p1:ValidateRequired="true" p1:Guid="95bd4df2-1ff9-42ca-aff3-3126b12012d9">
       <column name="" not-null="False" />
     </property>
