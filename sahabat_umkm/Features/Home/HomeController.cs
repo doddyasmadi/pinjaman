@@ -12,19 +12,24 @@ namespace sahabat_umkm.Controllers
     {
         public IActionResult Index()
         {
+            ViewData["Title"] = "Beranda";
+            ViewData["SubTitle"] = "Kabar Terbaru";
+
             return View();
         }
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description test.";
+            ViewData["Title"] = "Tentang Kami";
+            ViewData["SubTitle"] = "Tentang Kami";
 
             return View();
         }
 
         public IActionResult Contact()
         {
-            ViewData["Message"] = "Your contact page.";
+            ViewData["Title"] = "Contact";
+            ViewData["SubTitle"] = "Hubungi Kami";
 
             return View();
         }

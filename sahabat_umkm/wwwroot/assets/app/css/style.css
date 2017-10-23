@@ -1,0 +1,55 @@
+.m-header .m-header__bottom {
+    background: #2F318B;
+    color: #F08519;
+}
+.m-header-menu .m-menu__nav>.m-menu__item.m-menu__item--active>.m-menu__link>.m-menu__item-here, .m-header-menu .m-menu__nav>.m-menu__item.m-menu__item--expanded>.m-menu__link>.m-menu__item-here {
+    color: #2F318B;
+}
+.m-header-search .m-header-search__wrapper {
+    background-color: #424899;
+}
+.m-footer {
+    background: #F08519;
+}
+.m-footer .m-link, 
+.m-footer .m-footer__copyright, 
+.m-footer .m-nav>.m-nav__item>.m-nav__link .m-nav__link-text, 
+.m-footer .m-nav>.m-nav__item>.m-nav__link .m-nav__link-icon {
+    color: #ffffff;
+}
+.m-footer .m-link:hover,
+.m-footer .m-nav>.m-nav__item>.m-nav__link .m-nav__link-text:hover, 
+.m-footer .m-nav>.m-nav__item>.m-nav__link .m-nav__link-icon:hover {
+    color: #cccccc;
+}
+.my-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.m-portlet .my-card-title {
+    color: #ffffff;
+    text-shadow: #000000 .2rem .2rem;
+}
+.m-portlet .my-card-title:hover {
+    color: #cccccc;
+    text-shadow: #555555 .2rem .2rem;
+    text-decoration: none;
+}
+
+.carousel {
+    min-height: 300px;
+    max-height: 300px;
+    height: 300px;
+    margin-bottom: 30px;
+}
+
+.carousel img, .carousel .item {
+    height: 300px;
+    overflow: hidden;
+}
+
+.carousel .item a {
+    color: #ffffff;
+}
