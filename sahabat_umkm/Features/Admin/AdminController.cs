@@ -8,14 +8,14 @@ using sahabat_umkm.Models;
 
 namespace sahabat_umkm.Controllers
 {
-    public class AuthController : Controller
+    public class AdminController : Controller
     {
         public IActionResult Index()
         {
             ViewData["Title"] = "Login";
             ViewData["SubTitle"] = "Login Administrator";
 
-            return View();
+            return View("Index");
         }
     }
 }
