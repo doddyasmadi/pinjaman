@@ -61,12 +61,12 @@ namespace sahabat_umkm {
       }
       else if (db_server == "MySQL") {
         if (type == "Access") {
-            //connection = "Server=localhost;Port=30000;Database=sahabat_umkm;Uid=root;Pwd=GL-System123;"; //MariaDB
-            connection = "Server=localhost;Port=3306;Database=sahabat_umkm;Uid=root;Pwd=;"; //MySQL
+            connection = "Server=localhost;Port=30000;Database=sahabat_umkm;Uid=root;Pwd=GL-System123;"; //MariaDB
+            //connection = "Server=localhost;Port=3306;Database=sahabat_umkm;Uid=root;Pwd=;"; //MySQL
         }
         else if (type == "StarSchema") {
-            //connection = "Server=localhost;Port=30000;Database=sahabat_umkm;Uid=root;Pwd=GL-System123;"; //MariaDB
-            connection = "Server=localhost;Port=3306;Database=sahabat_umkm;Uid=root;Pwd=;"; //MySQL
+            connection = "Server=localhost;Port=30000;Database=sahabat_umkm;Uid=root;Pwd=GL-System123;"; //MariaDB
+            //connection = "Server=localhost;Port=3306;Database=sahabat_umkm;Uid=root;Pwd=;"; //MySQL
         }
       }
       return connection;

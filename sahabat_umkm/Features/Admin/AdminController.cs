@@ -17,5 +17,12 @@ namespace sahabat_umkm.Controllers
 
             return View("Index");
         }
+
+        public IActionResult FormAgama()
+        {
+            ViewData["Title"] = "Manage Data";
+            ViewData["Subtitle"] = "Data Agama";
+            return View();
+        }
     }
 }
