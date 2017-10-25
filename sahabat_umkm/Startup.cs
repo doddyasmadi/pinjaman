@@ -23,7 +23,7 @@ namespace sahabat_umkm {
       Configuration = builder.Build();
 
       AppCoreGlobal.BASE_URL = env.ContentRootPath;
-      //DbInitializer.Initialize();
+      DbInitializer.Initialize();
     }
 
     public IConfiguration Configuration { get; }
