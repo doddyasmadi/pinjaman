@@ -185,6 +185,7 @@ namespace sahabat_umkm.Migrations
                     alamat_tempat_tinggal_anggota = table.Column<string>(type: "longtext", nullable: false),
                     asosiasi_komunitas_anggota = table.Column<string>(type: "longtext", nullable: false),
                     email_anggota = table.Column<string>(type: "longtext", nullable: false),
+                    kesediaan_mendaftar_sebagai_anggota = table.Column<bool>(type: "bit", nullable: false),
                     m_jenjang_pendidikan_id = table.Column<int>(type: "int", nullable: false),
                     m_kelurahan_desa_id_ktp_anggota = table.Column<int>(type: "int", nullable: false),
                     m_kelurahan_desa_id_tt_anggota = table.Column<int>(type: "int", nullable: false),
@@ -195,6 +196,8 @@ namespace sahabat_umkm.Migrations
                     rt_tempat_tinggal_anggota = table.Column<string>(type: "longtext", nullable: false),
                     rw_ktp_anggota = table.Column<string>(type: "longtext", nullable: false),
                     rw_tempat_tinggal_anggota = table.Column<string>(type: "longtext", nullable: false),
+                    tanggal_pendaftaran_anggota = table.Column<DateTime>(type: "datetime(6)", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     telepon_anggota = table.Column<string>(type: "longtext", nullable: false)
                 },
                 constraints: table =>
@@ -345,6 +348,102 @@ namespace sahabat_umkm.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "t_info_bekraf",
+                columns: table => new
+                {
+                    t_info_bekraf_id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    deskripsikan_tentang_bekraf = table.Column<string>(type: "longtext", nullable: false),
+                    harapan_terhadap_bekraf = table.Column<string>(type: "longtext", nullable: false),
+                    keahlian_khusus = table.Column<string>(type: "longtext", nullable: false),
+                    kota_event_bekraf = table.Column<string>(type: "longtext", nullable: false),
+                    publikasi_event_bekraf = table.Column<string>(type: "longtext", nullable: false),
+                    t_data_anggota_id = table.Column<int>(type: "int", nullable: false),
+                    tahu_bekraf = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_t_info_bekraf", x => x.t_info_bekraf_id);
+                    table.ForeignKey(
+                        name: "FK_t_info_bekraf_t_data_anggota_t_data_anggota_id",
+                        column: x => x.t_data_anggota_id,
+                        principalTable: "t_data_anggota",
+                        principalColumn: "t_data_anggota_id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "t_data_pemegang_saham",
+                columns: table => new
+                {
+                    t_data_pemegang_saham_id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    ktp_pemegang_saham = table.Column<string>(type: "longtext", nullable: false),
+                    npwp_pemegang_saham = table.Column<string>(type: "longtext", nullable: false),
+                    persentase_saham = table.Column<string>(type: "longtext", nullable: false),
+                    t_data_usaha_id = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_t_data_pemegang_saham", x => x.t_data_pemegang_saham_id);
+                    table.ForeignKey(
+                        name: "FK_t_data_pemegang_saham_t_data_usaha_t_data_usaha_id",
+                        column: x => x.t_data_usaha_id,
+                        principalTable: "t_data_usaha",
+                        principalColumn: "t_data_usaha_id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "t_hak_kekayaan_intelektual",
+                columns: table => new
+                {
+                    t_hak_kekayaan_intelektual_id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    definisi_hak_kekayaan_intelektual = table.Column<string>(type: "longtext", nullable: false),
+                    kendala_saat_menjalankan_usaha = table.Column<string>(type: "longtext", nullable: false),
+                    konsep_keuangan_usaha = table.Column<string>(type: "longtext", nullable: false),
+                    nama_hak_kekayaan_intelektual = table.Column<string>(type: "longtext", nullable: false),
+                    penjelasan_hak_kekayaan_intelektual = table.Column<string>(type: "longtext", nullable: false),
+                    penjelasan_tempat_usaha = table.Column<string>(type: "longtext", nullable: false),
+                    pernah_melakukan_kredit_pinjaman = table.Column<string>(type: "longtext", nullable: false),
+                    pernah_mendapat_bantuan_pemerintah_swasta = table.Column<string>(type: "longtext", nullable: false),
+                    t_data_usaha_id = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_t_hak_kekayaan_intelektual", x => x.t_hak_kekayaan_intelektual_id);
+                    table.ForeignKey(
+                        name: "FK_t_hak_kekayaan_intelektual_t_data_usaha_t_data_usaha_id",
+                        column: x => x.t_data_usaha_id,
+                        principalTable: "t_data_usaha",
+                        principalColumn: "t_data_usaha_id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "t_pendirian_legalitas",
+                columns: table => new
+                {
+                    t_pendirian_legalitas_id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    penjelasan_domisili_usaha = table.Column<string>(type: "longtext", nullable: false),
+                    surat_keterangan_domisili_usaha = table.Column<string>(type: "longtext", nullable: false),
+                    t_data_usaha_id = table.Column<int>(type: "int", nullable: false),
+                    usulan_nama_perusahaan = table.Column<string>(type: "longtext", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_t_pendirian_legalitas", x => x.t_pendirian_legalitas_id);
+                    table.ForeignKey(
+                        name: "FK_t_pendirian_legalitas_t_data_usaha_t_data_usaha_id",
+                        column: x => x.t_data_usaha_id,
+                        principalTable: "t_data_usaha",
+                        principalColumn: "t_data_usaha_id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_feature_map_m_feature_id",
                 table: "feature_map",
@@ -381,6 +480,11 @@ namespace sahabat_umkm.Migrations
                 column: "m_kelurahan_desa_id_tt_anggota");
 
             migrationBuilder.CreateIndex(
+                name: "IX_t_data_pemegang_saham_t_data_usaha_id",
+                table: "t_data_pemegang_saham",
+                column: "t_data_usaha_id");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_t_data_usaha_m_jenis_bidang_usaha_id",
                 table: "t_data_usaha",
                 column: "m_jenis_bidang_usaha_id");
@@ -399,6 +503,21 @@ namespace sahabat_umkm.Migrations
                 name: "IX_t_data_usaha_t_data_anggota_id",
                 table: "t_data_usaha",
                 column: "t_data_anggota_id");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_t_hak_kekayaan_intelektual_t_data_usaha_id",
+                table: "t_hak_kekayaan_intelektual",
+                column: "t_data_usaha_id");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_t_info_bekraf_t_data_anggota_id",
+                table: "t_info_bekraf",
+                column: "t_data_anggota_id");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_t_pendirian_legalitas_t_data_usaha_id",
+                table: "t_pendirian_legalitas",
+                column: "t_data_usaha_id");
 
             migrationBuilder.CreateIndex(
                 name: "IX_t_posting_t_kategori_posting_id",
@@ -424,7 +543,16 @@ namespace sahabat_umkm.Migrations
                 name: "m_user");
 
             migrationBuilder.DropTable(
-                name: "t_data_usaha");
+                name: "t_data_pemegang_saham");
+
+            migrationBuilder.DropTable(
+                name: "t_hak_kekayaan_intelektual");
+
+            migrationBuilder.DropTable(
+                name: "t_info_bekraf");
+
+            migrationBuilder.DropTable(
+                name: "t_pendirian_legalitas");
 
             migrationBuilder.DropTable(
                 name: "t_posting");
@@ -436,6 +564,15 @@ namespace sahabat_umkm.Migrations
                 name: "m_user_group");
 
             migrationBuilder.DropTable(
+                name: "t_data_usaha");
+
+            migrationBuilder.DropTable(
+                name: "t_kategori_posting");
+
+            migrationBuilder.DropTable(
+                name: "m_feature_group");
+
+            migrationBuilder.DropTable(
                 name: "m_jenis_bidang_usaha");
 
             migrationBuilder.DropTable(
@@ -443,12 +580,6 @@ namespace sahabat_umkm.Migrations
 
             migrationBuilder.DropTable(
                 name: "t_data_anggota");
-
-            migrationBuilder.DropTable(
-                name: "t_kategori_posting");
-
-            migrationBuilder.DropTable(
-                name: "m_feature_group");
 
             migrationBuilder.DropTable(
                 name: "m_jenjang_pendidikan");

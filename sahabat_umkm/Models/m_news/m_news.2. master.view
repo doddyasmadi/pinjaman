@@ -238,10 +238,6 @@
                 <Hidden>false</Hidden>
               </Model>
             </Children>
-            <Location>
-              <X>-648 px</X>
-              <Y>-360 px</Y>
-            </Location>
             <Size>
               <Width>190 px</Width>
               <Height>248 px</Height>
@@ -381,8 +377,8 @@
               </Model>
             </Children>
             <Location>
-              <X>-648 px</X>
-              <Y>-152 px</Y>
+              <X>730 px</X>
+              <Y>0 px</Y>
             </Location>
             <Size>
               <Width>150 px</Width>
@@ -485,8 +481,8 @@
               </Model>
             </Children>
             <Location>
-              <X>-640 px</X>
-              <Y>136 px</Y>
+              <X>260 px</X>
+              <Y>290 px</Y>
             </Location>
             <Size>
               <Width>189.154069204713 px</Width>
@@ -624,7 +620,7 @@
               </Model>
             </Children>
             <Location>
-              <X>-648 px</X>
+              <X>230 px</X>
               <Y>0 px</Y>
             </Location>
             <Size>
@@ -744,8 +740,8 @@
               </Model>
             </Children>
             <Location>
-              <X>-640 px</X>
-              <Y>256 px</Y>
+              <X>0 px</X>
+              <Y>290 px</Y>
             </Location>
             <Size>
               <Width>218 px</Width>
@@ -883,8 +879,8 @@
               </Model>
             </Children>
             <Location>
-              <X>-640 px</X>
-              <Y>376 px</Y>
+              <X>490 px</X>
+              <Y>0 px</Y>
             </Location>
             <Size>
               <Width>200 px</Width>
@@ -906,13 +902,13 @@
             <FixedHeight>22 px</FixedHeight>
           </Model>
         </Children>
-        <GridSize>8 px</GridSize>
+        <GridEnabled>false</GridEnabled>
         <ViewPort>
           <ScaleMode>Free</ScaleMode>
           <Scale>1</Scale>
           <Location>
-            <X>-860 px</X>
-            <Y>-228.625 px</Y>
+            <X>0 px</X>
+            <Y>-160 px</Y>
           </Location>
         </ViewPort>
         <Oid xsi:type="SchemaModelOID">

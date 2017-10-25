@@ -20,9 +20,9 @@ using System.Runtime.Serialization;
 namespace sahabat_umkm
 {
     [DataContract(IsReference = true)]
-    public partial class m_parameter {
+    public partial class t_info_bekraf {
 
-        public m_parameter()
+        public t_info_bekraf()
         {
             OnCreated();
         }
@@ -30,7 +30,7 @@ namespace sahabat_umkm
         [DataMember(Order=1)]
         [System.ComponentModel.DataAnnotations.Key]
         [System.ComponentModel.DataAnnotations.Required()]
-        public virtual int m_parameter_id
+        public virtual int t_info_bekraf_id
         {
             get;
             set;
@@ -38,7 +38,7 @@ namespace sahabat_umkm
 
         [DataMember(Order=2)]
         [System.ComponentModel.DataAnnotations.Required()]
-        public virtual string parameter_group
+        public virtual string kota_event_bekraf
         {
             get;
             set;
@@ -46,7 +46,7 @@ namespace sahabat_umkm
 
         [DataMember(Order=3)]
         [System.ComponentModel.DataAnnotations.Required()]
-        public virtual string parameter_key
+        public virtual string publikasi_event_bekraf
         {
             get;
             set;
@@ -54,7 +54,45 @@ namespace sahabat_umkm
 
         [DataMember(Order=4)]
         [System.ComponentModel.DataAnnotations.Required()]
-        public virtual string parameter_value
+        public virtual string keahlian_khusus
+        {
+            get;
+            set;
+        }
+
+        [DataMember(Order=5)]
+        [System.ComponentModel.DataAnnotations.Required()]
+        public virtual bool tahu_bekraf
+        {
+            get;
+            set;
+        }
+
+        [DataMember(Order=6)]
+        [System.ComponentModel.DataAnnotations.Required()]
+        public virtual string deskripsikan_tentang_bekraf
+        {
+            get;
+            set;
+        }
+
+        [DataMember(Order=7)]
+        [System.ComponentModel.DataAnnotations.Required()]
+        public virtual string harapan_terhadap_bekraf
+        {
+            get;
+            set;
+        }
+
+        [DataMember(Order=8)]
+        [System.ComponentModel.DataAnnotations.Required()]
+        public virtual int t_data_anggota_id
+        {
+            get;
+            set;
+        }
+
+        public virtual t_data_anggota t_data_anggota
         {
             get;
             set;

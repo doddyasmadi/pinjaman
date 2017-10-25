@@ -11,7 +11,7 @@ using System;
 namespace sahabat_umkm.Migrations
 {
     [DbContext(typeof(m_news))]
-    [Migration("20171023043325_m_news_1.1.1.1")]
+    [Migration("20171025043837_m_news_1.1.1.1")]
     partial class m_news_1111
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -323,6 +323,9 @@ namespace sahabat_umkm.Migrations
                         .IsRequired()
                         .HasColumnName("email_anggota");
 
+                    b.Property<bool>("kesediaan_mendaftar_sebagai_anggota")
+                        .HasColumnName("kesediaan_mendaftar_sebagai_anggota");
+
                     b.Property<int>("m_jenjang_pendidikan_id")
                         .HasColumnName("m_jenjang_pendidikan_id");
 
@@ -360,6 +363,10 @@ namespace sahabat_umkm.Migrations
                         .IsRequired()
                         .HasColumnName("rw_tempat_tinggal_anggota");
 
+                    b.Property<DateTime>("tanggal_pendaftaran_anggota")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("tanggal_pendaftaran_anggota");
+
                     b.Property<string>("telepon_anggota")
                         .IsRequired()
                         .HasColumnName("telepon_anggota");
@@ -373,6 +380,34 @@ namespace sahabat_umkm.Migrations
                     b.HasIndex("m_kelurahan_desa_id_tt_anggota");
 
                     b.ToTable("t_data_anggota");
+                });
+
+            modelBuilder.Entity("sahabat_umkm.t_data_pemegang_saham", b =>
+                {
+                    b.Property<int>("t_data_pemegang_saham_id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("t_data_pemegang_saham_id");
+
+                    b.Property<string>("ktp_pemegang_saham")
+                        .IsRequired()
+                        .HasColumnName("ktp_pemegang_saham");
+
+                    b.Property<string>("npwp_pemegang_saham")
+                        .IsRequired()
+                        .HasColumnName("npwp_pemegang_saham");
+
+                    b.Property<string>("persentase_saham")
+                        .IsRequired()
+                        .HasColumnName("persentase_saham");
+
+                    b.Property<int>("t_data_usaha_id")
+                        .HasColumnName("t_data_usaha_id");
+
+                    b.HasKey("t_data_pemegang_saham_id");
+
+                    b.HasIndex("t_data_usaha_id");
+
+                    b.ToTable("t_data_pemegang_saham");
                 });
 
             modelBuilder.Entity("sahabat_umkm.t_data_usaha", b =>
@@ -454,6 +489,93 @@ namespace sahabat_umkm.Migrations
                     b.ToTable("t_data_usaha");
                 });
 
+            modelBuilder.Entity("sahabat_umkm.t_hak_kekayaan_intelektual", b =>
+                {
+                    b.Property<int>("t_hak_kekayaan_intelektual_id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("t_hak_kekayaan_intelektual_id");
+
+                    b.Property<string>("definisi_hak_kekayaan_intelektual")
+                        .IsRequired()
+                        .HasColumnName("definisi_hak_kekayaan_intelektual");
+
+                    b.Property<string>("kendala_saat_menjalankan_usaha")
+                        .IsRequired()
+                        .HasColumnName("kendala_saat_menjalankan_usaha");
+
+                    b.Property<string>("konsep_keuangan_usaha")
+                        .IsRequired()
+                        .HasColumnName("konsep_keuangan_usaha");
+
+                    b.Property<string>("nama_hak_kekayaan_intelektual")
+                        .IsRequired()
+                        .HasColumnName("nama_hak_kekayaan_intelektual");
+
+                    b.Property<string>("penjelasan_hak_kekayaan_intelektual")
+                        .IsRequired()
+                        .HasColumnName("penjelasan_hak_kekayaan_intelektual");
+
+                    b.Property<string>("penjelasan_tempat_usaha")
+                        .IsRequired()
+                        .HasColumnName("penjelasan_tempat_usaha");
+
+                    b.Property<string>("pernah_melakukan_kredit_pinjaman")
+                        .IsRequired()
+                        .HasColumnName("pernah_melakukan_kredit_pinjaman");
+
+                    b.Property<string>("pernah_mendapat_bantuan_pemerintah_swasta")
+                        .IsRequired()
+                        .HasColumnName("pernah_mendapat_bantuan_pemerintah_swasta");
+
+                    b.Property<int>("t_data_usaha_id")
+                        .HasColumnName("t_data_usaha_id");
+
+                    b.HasKey("t_hak_kekayaan_intelektual_id");
+
+                    b.HasIndex("t_data_usaha_id");
+
+                    b.ToTable("t_hak_kekayaan_intelektual");
+                });
+
+            modelBuilder.Entity("sahabat_umkm.t_info_bekraf", b =>
+                {
+                    b.Property<int>("t_info_bekraf_id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("t_info_bekraf_id");
+
+                    b.Property<string>("deskripsikan_tentang_bekraf")
+                        .IsRequired()
+                        .HasColumnName("deskripsikan_tentang_bekraf");
+
+                    b.Property<string>("harapan_terhadap_bekraf")
+                        .IsRequired()
+                        .HasColumnName("harapan_terhadap_bekraf");
+
+                    b.Property<string>("keahlian_khusus")
+                        .IsRequired()
+                        .HasColumnName("keahlian_khusus");
+
+                    b.Property<string>("kota_event_bekraf")
+                        .IsRequired()
+                        .HasColumnName("kota_event_bekraf");
+
+                    b.Property<string>("publikasi_event_bekraf")
+                        .IsRequired()
+                        .HasColumnName("publikasi_event_bekraf");
+
+                    b.Property<int>("t_data_anggota_id")
+                        .HasColumnName("t_data_anggota_id");
+
+                    b.Property<bool>("tahu_bekraf")
+                        .HasColumnName("tahu_bekraf");
+
+                    b.HasKey("t_info_bekraf_id");
+
+                    b.HasIndex("t_data_anggota_id");
+
+                    b.ToTable("t_info_bekraf");
+                });
+
             modelBuilder.Entity("sahabat_umkm.t_kategori_posting", b =>
                 {
                     b.Property<int>("t_kategori_posting_id")
@@ -467,6 +589,34 @@ namespace sahabat_umkm.Migrations
                     b.HasKey("t_kategori_posting_id");
 
                     b.ToTable("t_kategori_posting");
+                });
+
+            modelBuilder.Entity("sahabat_umkm.t_pendirian_legalitas", b =>
+                {
+                    b.Property<int>("t_pendirian_legalitas_id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("t_pendirian_legalitas_id");
+
+                    b.Property<string>("penjelasan_domisili_usaha")
+                        .IsRequired()
+                        .HasColumnName("penjelasan_domisili_usaha");
+
+                    b.Property<string>("surat_keterangan_domisili_usaha")
+                        .IsRequired()
+                        .HasColumnName("surat_keterangan_domisili_usaha");
+
+                    b.Property<int>("t_data_usaha_id")
+                        .HasColumnName("t_data_usaha_id");
+
+                    b.Property<string>("usulan_nama_perusahaan")
+                        .IsRequired()
+                        .HasColumnName("usulan_nama_perusahaan");
+
+                    b.HasKey("t_pendirian_legalitas_id");
+
+                    b.HasIndex("t_data_usaha_id");
+
+                    b.ToTable("t_pendirian_legalitas");
                 });
 
             modelBuilder.Entity("sahabat_umkm.t_posting", b =>
@@ -551,6 +701,14 @@ namespace sahabat_umkm.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
+            modelBuilder.Entity("sahabat_umkm.t_data_pemegang_saham", b =>
+                {
+                    b.HasOne("sahabat_umkm.t_data_usaha", "t_data_usaha")
+                        .WithMany("t_data_pemegang_saham")
+                        .HasForeignKey("t_data_usaha_id")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
             modelBuilder.Entity("sahabat_umkm.t_data_usaha", b =>
                 {
                     b.HasOne("sahabat_umkm.m_jenis_bidang_usaha", "m_jenis_bidang_usaha")
@@ -571,6 +729,30 @@ namespace sahabat_umkm.Migrations
                     b.HasOne("sahabat_umkm.t_data_anggota", "t_data_anggota")
                         .WithMany("t_data_usaha")
                         .HasForeignKey("t_data_anggota_id")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("sahabat_umkm.t_hak_kekayaan_intelektual", b =>
+                {
+                    b.HasOne("sahabat_umkm.t_data_usaha", "t_data_usaha")
+                        .WithMany("t_hak_kekayaan_intelektual")
+                        .HasForeignKey("t_data_usaha_id")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("sahabat_umkm.t_info_bekraf", b =>
+                {
+                    b.HasOne("sahabat_umkm.t_data_anggota", "t_data_anggota")
+                        .WithMany("t_info_bekraf")
+                        .HasForeignKey("t_data_anggota_id")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("sahabat_umkm.t_pendirian_legalitas", b =>
+                {
+                    b.HasOne("sahabat_umkm.t_data_usaha", "t_data_usaha")
+                        .WithMany("t_pendirian_legalitas")
+                        .HasForeignKey("t_data_usaha_id")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

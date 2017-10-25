@@ -211,6 +211,12 @@
     <property name="m_jenjang_pendidikan_id" type="Int32" p1:ValidateRequired="true" p1:Guid="6b26f892-54e4-4fb1-8ec9-137baf175b8d">
       <column name="" not-null="False" />
     </property>
+    <property name="kesediaan_mendaftar_sebagai_anggota" type="Boolean" p1:ValidateRequired="true" p1:Guid="67cefe59-5ecc-404f-8700-7156cb4bac53">
+      <column name="" />
+    </property>
+    <property name="tanggal_pendaftaran_anggota" type="DateTime" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="152dd634-ac77-4d61-8555-375d4c371eab">
+      <column name="" />
+    </property>
   </class>
   <class name="t_data_usaha" entity-set="t_data_usaha" table="" p1:Guid="0284e13c-bc79-447e-b18b-16fe09765884">
     <id name="t_data_usaha_id" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="300d23a5-9829-4374-8cd0-23b20aa678ac">
@@ -294,6 +300,98 @@
     </id>
     <property name="nama_kategori_posting" type="String" p1:ValidateRequired="true" p1:Guid="43053637-4fe8-48f7-bf00-6590f31ec7fc">
       <column name="" />
+    </property>
+  </class>
+  <class name="t_hak_kekayaan_intelektual" entity-set="t_hak_kekayaan_intelektual" table="" p1:Guid="454de8ff-ff1c-4413-a5b6-36ea85c459b1">
+    <id name="t_hak_kekayaan_intelektual_id" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="c5caca97-0de5-4b5e-89d7-606679eccb9e">
+      <column name="" />
+    </id>
+    <property name="nama_hak_kekayaan_intelektual" type="String" p1:ValidateRequired="true" p1:Guid="b3fdab03-25da-47ba-8cfc-aa330844464e">
+      <column name="" />
+    </property>
+    <property name="penjelasan_hak_kekayaan_intelektual" type="String" p1:ValidateRequired="true" p1:Guid="2687bca4-24c1-4699-881e-57891116b762">
+      <column name="" />
+    </property>
+    <property name="definisi_hak_kekayaan_intelektual" type="String" p1:ValidateRequired="true" p1:Guid="eadb8b58-e265-441d-9da0-23f157ea1889">
+      <column name="" />
+    </property>
+    <property name="konsep_keuangan_usaha" type="String" p1:ValidateRequired="true" p1:Guid="f6391b27-c5a4-4cee-8976-beca9eaf2a3a">
+      <column name="" />
+    </property>
+    <property name="pernah_melakukan_kredit_pinjaman" type="String" p1:ValidateRequired="true" p1:Guid="badf9f13-beec-46a3-8113-aa9148c49a56">
+      <column name="" />
+    </property>
+    <property name="pernah_mendapat_bantuan_pemerintah_swasta" type="String" p1:ValidateRequired="true" p1:Guid="8b81603f-1d47-4f07-ab7b-35c17f21de5c">
+      <column name="" />
+    </property>
+    <property name="penjelasan_tempat_usaha" type="String" p1:ValidateRequired="true" p1:Guid="e0c55508-4382-4633-8937-3baf597fc084">
+      <column name="" />
+    </property>
+    <property name="kendala_saat_menjalankan_usaha" type="String" p1:ValidateRequired="true" p1:Guid="755f8747-fd44-4ad6-b82c-4dada064d104">
+      <column name="" />
+    </property>
+    <property name="t_data_usaha_id" type="Int32" p1:ValidateRequired="true" p1:Guid="e59500e6-2256-4914-9f0b-9c0ac20f98b9">
+      <column name="" not-null="False" />
+    </property>
+  </class>
+  <class name="t_pendirian_legalitas" entity-set="t_pendirian_legalitas" table="" p1:Guid="f68596ec-a093-42df-953b-c521c417407a">
+    <id name="t_pendirian_legalitas_id" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="afcceadf-46f1-4c57-b8d5-b6ff20cff57a">
+      <column name="" />
+    </id>
+    <property name="usulan_nama_perusahaan" type="String" p1:ValidateRequired="true" p1:Guid="0ee5858a-8a1d-4063-9e00-b444aa36fa6a">
+      <column name="" />
+    </property>
+    <property name="surat_keterangan_domisili_usaha" type="String" p1:ValidateRequired="true" p1:Guid="4b5da0a1-7582-4ba8-af7b-5a70e98be198">
+      <column name="" />
+    </property>
+    <property name="penjelasan_domisili_usaha" type="String" p1:ValidateRequired="true" p1:Guid="9ff1d603-62e6-4e55-835e-1e6a75a96bb3">
+      <column name="" />
+    </property>
+    <property name="t_data_usaha_id" type="Int32" p1:ValidateRequired="true" p1:Guid="01edf169-62e1-4026-818e-df7af94f8a19">
+      <column name="" not-null="False" />
+    </property>
+  </class>
+  <class name="t_data_pemegang_saham" entity-set="t_data_pemegang_saham" table="" p1:Guid="b01a4f1b-dca2-43fb-af4f-a677e8eb13b6">
+    <id name="t_data_pemegang_saham_id" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="b287e036-49da-403f-b62d-73b221cb6c95">
+      <column name="" />
+    </id>
+    <property name="ktp_pemegang_saham" type="String" p1:ValidateRequired="true" p1:Guid="7a176366-d423-4843-ad0e-0f3dbf60e8bf">
+      <column name="" />
+    </property>
+    <property name="npwp_pemegang_saham" type="String" p1:ValidateRequired="true" p1:Guid="2074619c-e077-41f6-988f-a9064b34ddb2">
+      <column name="" />
+    </property>
+    <property name="persentase_saham" type="String" p1:ValidateRequired="true" p1:Guid="b83d52dd-a5c8-4c49-bdcf-f7d444a6cc05">
+      <column name="" />
+    </property>
+    <property name="t_data_usaha_id" type="Int32" p1:ValidateRequired="true" p1:Guid="97cc6c27-879b-42de-bd96-063212318781">
+      <column name="" not-null="False" />
+    </property>
+  </class>
+  <class name="t_info_bekraf" entity-set="t_info_bekraf" table="" p1:Guid="d12625ae-f004-4059-91d0-f69a68271148">
+    <id name="t_info_bekraf_id" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="a26a2889-dbf3-4ed6-8201-949ca5dbe700">
+      <column name="" />
+    </id>
+    <property name="kota_event_bekraf" type="String" p1:ValidateRequired="true" p1:Guid="0cc83963-2d9f-4b1f-9813-9a3344fc4696">
+      <column name="" />
+    </property>
+    <property name="publikasi_event_bekraf" type="String" p1:ValidateRequired="true" p1:Guid="85ea3f3f-5ceb-43cc-91d7-b434a2fe7bdf">
+      <column name="" />
+    </property>
+    <property name="keahlian_khusus" type="String" p1:ValidateRequired="true" p1:Guid="9770a3c9-7a11-47c3-bda5-0250a0065621">
+      <column name="" />
+    </property>
+    <property name="tahu_bekraf" type="Boolean" p1:ValidateRequired="true" p1:Guid="00459f8c-84e4-4a3c-97e4-0e16cc3298d1">
+      <column name="" />
+    </property>
+    <property name="deskripsikan_tentang_bekraf" type="String" p1:ValidateRequired="true" p1:Guid="37026403-3e1c-4aca-95d9-28b864791383">
+      <column name="" />
+    </property>
+    <property name="harapan_terhadap_bekraf" type="String" p1:ValidateRequired="true" p1:Guid="e9a4e6f4-4f1d-4af7-bef0-25a82a4a139d">
+      <column name="" />
+    </property>
+    <property name="t_data_anggota_id" type="Int32" p1:ValidateRequired="true" p1:Guid="8ac2f315-3d41-4cbd-adb9-03edefb35bd4">
+      <column name="" not-null="False" />
     </property>
   </class>
   <associations>
@@ -391,6 +489,38 @@
       </end1>
       <end2 multiplicity="Many" name="t_posting" class="t_kategori_posting" relation-class="t_posting" p1:Guid="fa4d6a1b-9b15-4926-b64f-b2de944bbd02">
         <property name="t_kategori_posting_id" />
+      </end2>
+    </association>
+    <association name="t_data_usaha_t_hak_kekayaan_intelektual" cardinality="OneToMany" p1:Guid="6cb285f9-baef-4368-abcd-86ffa77901c3">
+      <end1 multiplicity="One" name="t_data_usaha" class="t_hak_kekayaan_intelektual" relation-class="t_data_usaha" constrained="True" p1:Guid="dd5aca6d-9852-4af4-875d-e3966febd972">
+        <property name="t_data_usaha_id" />
+      </end1>
+      <end2 multiplicity="Many" name="t_hak_kekayaan_intelektual" class="t_data_usaha" relation-class="t_hak_kekayaan_intelektual" p1:Guid="a370d1c4-0ad6-4d42-918f-fa31de7d9d38">
+        <property name="t_data_usaha_id" />
+      </end2>
+    </association>
+    <association name="t_data_usaha_t_pendirian_legalitas" cardinality="OneToMany" p1:Guid="862e0c28-957d-4666-b483-41d395b64678">
+      <end1 multiplicity="One" name="t_data_usaha" class="t_pendirian_legalitas" relation-class="t_data_usaha" constrained="True" p1:Guid="7cbc6404-f78c-471e-a8e5-473b2511ecb6">
+        <property name="t_data_usaha_id" />
+      </end1>
+      <end2 multiplicity="Many" name="t_pendirian_legalitas" class="t_data_usaha" relation-class="t_pendirian_legalitas" p1:Guid="808ca2de-23f6-417f-a06a-fa53fb620803">
+        <property name="t_data_usaha_id" />
+      </end2>
+    </association>
+    <association name="t_data_usaha_t_data_pemegang_saham" cardinality="OneToMany" p1:Guid="60b11fd1-a78b-428e-a343-fdb85a390961">
+      <end1 multiplicity="One" name="t_data_usaha" class="t_data_pemegang_saham" relation-class="t_data_usaha" constrained="True" p1:Guid="2acc0474-cfd9-4fd8-a317-d774d9308a12">
+        <property name="t_data_usaha_id" />
+      </end1>
+      <end2 multiplicity="Many" name="t_data_pemegang_saham" class="t_data_usaha" relation-class="t_data_pemegang_saham" p1:Guid="55b8a462-7785-4b5d-805a-ecd5041d99e5">
+        <property name="t_data_usaha_id" />
+      </end2>
+    </association>
+    <association name="t_data_anggota_t_info_bekraf" cardinality="OneToMany" p1:Guid="58348b28-e333-48f8-84b6-abcfe2470ab1">
+      <end1 multiplicity="One" name="t_data_anggota" class="t_info_bekraf" relation-class="t_data_anggota" constrained="True" p1:Guid="e3268191-6273-48cf-8f71-105884555d7b">
+        <property name="t_data_anggota_id" />
+      </end1>
+      <end2 multiplicity="Many" name="t_info_bekraf" class="t_data_anggota" relation-class="t_info_bekraf" p1:Guid="f8093345-86fd-4b5d-81bd-f2e0672e0e2c">
+        <property name="t_data_anggota_id" />
       </end2>
     </association>
   </associations>

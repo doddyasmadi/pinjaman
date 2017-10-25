@@ -20,9 +20,9 @@ using System.Runtime.Serialization;
 namespace sahabat_umkm
 {
     [DataContract(IsReference = true)]
-    public partial class t_posting {
+    public partial class t_hak_kekayaan_intelektual {
 
-        public t_posting()
+        public t_hak_kekayaan_intelektual()
         {
             OnCreated();
         }
@@ -30,7 +30,7 @@ namespace sahabat_umkm
         [DataMember(Order=1)]
         [System.ComponentModel.DataAnnotations.Key]
         [System.ComponentModel.DataAnnotations.Required()]
-        public virtual int t_posting_id
+        public virtual int t_hak_kekayaan_intelektual_id
         {
             get;
             set;
@@ -38,7 +38,7 @@ namespace sahabat_umkm
 
         [DataMember(Order=2)]
         [System.ComponentModel.DataAnnotations.Required()]
-        public virtual string judul_posting
+        public virtual string nama_hak_kekayaan_intelektual
         {
             get;
             set;
@@ -46,7 +46,7 @@ namespace sahabat_umkm
 
         [DataMember(Order=3)]
         [System.ComponentModel.DataAnnotations.Required()]
-        public virtual string isi_posting
+        public virtual string penjelasan_hak_kekayaan_intelektual
         {
             get;
             set;
@@ -54,7 +54,7 @@ namespace sahabat_umkm
 
         [DataMember(Order=4)]
         [System.ComponentModel.DataAnnotations.Required()]
-        public virtual System.DateTime tanggal_posting
+        public virtual string definisi_hak_kekayaan_intelektual
         {
             get;
             set;
@@ -62,7 +62,7 @@ namespace sahabat_umkm
 
         [DataMember(Order=5)]
         [System.ComponentModel.DataAnnotations.Required()]
-        public virtual string status_posting
+        public virtual string konsep_keuangan_usaha
         {
             get;
             set;
@@ -70,7 +70,7 @@ namespace sahabat_umkm
 
         [DataMember(Order=6)]
         [System.ComponentModel.DataAnnotations.Required()]
-        public virtual string thumbnail_posting
+        public virtual string pernah_melakukan_kredit_pinjaman
         {
             get;
             set;
@@ -78,13 +78,37 @@ namespace sahabat_umkm
 
         [DataMember(Order=7)]
         [System.ComponentModel.DataAnnotations.Required()]
-        public virtual int t_kategori_posting_id
+        public virtual string pernah_mendapat_bantuan_pemerintah_swasta
         {
             get;
             set;
         }
 
-        public virtual t_kategori_posting t_kategori_posting
+        [DataMember(Order=8)]
+        [System.ComponentModel.DataAnnotations.Required()]
+        public virtual string penjelasan_tempat_usaha
+        {
+            get;
+            set;
+        }
+
+        [DataMember(Order=9)]
+        [System.ComponentModel.DataAnnotations.Required()]
+        public virtual string kendala_saat_menjalankan_usaha
+        {
+            get;
+            set;
+        }
+
+        [DataMember(Order=10)]
+        [System.ComponentModel.DataAnnotations.Required()]
+        public virtual int t_data_usaha_id
+        {
+            get;
+            set;
+        }
+
+        public virtual t_data_usaha t_data_usaha
         {
             get;
             set;

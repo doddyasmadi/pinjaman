@@ -20,9 +20,9 @@ using System.Runtime.Serialization;
 namespace sahabat_umkm
 {
     [DataContract(IsReference = true)]
-    public partial class m_parameter {
+    public partial class t_pendirian_legalitas {
 
-        public m_parameter()
+        public t_pendirian_legalitas()
         {
             OnCreated();
         }
@@ -30,7 +30,7 @@ namespace sahabat_umkm
         [DataMember(Order=1)]
         [System.ComponentModel.DataAnnotations.Key]
         [System.ComponentModel.DataAnnotations.Required()]
-        public virtual int m_parameter_id
+        public virtual int t_pendirian_legalitas_id
         {
             get;
             set;
@@ -38,7 +38,7 @@ namespace sahabat_umkm
 
         [DataMember(Order=2)]
         [System.ComponentModel.DataAnnotations.Required()]
-        public virtual string parameter_group
+        public virtual string usulan_nama_perusahaan
         {
             get;
             set;
@@ -46,7 +46,7 @@ namespace sahabat_umkm
 
         [DataMember(Order=3)]
         [System.ComponentModel.DataAnnotations.Required()]
-        public virtual string parameter_key
+        public virtual string surat_keterangan_domisili_usaha
         {
             get;
             set;
@@ -54,7 +54,21 @@ namespace sahabat_umkm
 
         [DataMember(Order=4)]
         [System.ComponentModel.DataAnnotations.Required()]
-        public virtual string parameter_value
+        public virtual string penjelasan_domisili_usaha
+        {
+            get;
+            set;
+        }
+
+        [DataMember(Order=5)]
+        [System.ComponentModel.DataAnnotations.Required()]
+        public virtual int t_data_usaha_id
+        {
+            get;
+            set;
+        }
+
+        public virtual t_data_usaha t_data_usaha
         {
             get;
             set;
